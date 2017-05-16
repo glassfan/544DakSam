@@ -1514,3 +1514,190 @@ con
 
 18:00:45 INFO  : Launch script is exported to file 'C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_ece544_proj2_olc.elf.tcl'
 18:36:45 INFO  : Disconnected from the channel tcfchan#6.
+17:29:50 INFO  : Launching XSDB server: xsdb.bat -interactive C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\temp_xsdb_launch_script.tcl
+17:29:57 INFO  : XSDB server has started successfully.
+17:30:00 INFO  : Processing command line option -hwspec C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga.hdf.
+17:30:00 INFO  : Checking for hwspec changes in the project n4fpga_hw_platform_0.
+17:32:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:33:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:33:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+17:33:59 INFO  : FPGA configured successfully with bitstream "C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/download.bit"
+17:34:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+17:34:18 INFO  : 'fpga -state' command is executed.
+17:34:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:34:18 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646055A' is selected.
+17:34:18 INFO  : 'jtag frequency' command is executed.
+17:34:18 INFO  : Context for processor 'microblaze_0' is selected.
+17:34:18 INFO  : Hardware design information is loaded from 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf'.
+17:34:18 INFO  : Context for processor 'microblaze_0' is selected.
+17:34:19 INFO  : Processor reset is completed for 'microblaze_0'.
+17:34:19 INFO  : Context for processor 'microblaze_0' is selected.
+17:34:20 INFO  : The application 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf' is downloaded to processor 'microblaze_0'.
+17:34:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+loadhw C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+dow C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf
+----------------End of Script----------------
+
+17:34:20 INFO  : Memory regions updated for context MicroBlaze #0
+17:34:20 INFO  : Context for processor 'microblaze_0' is selected.
+17:34:20 INFO  : 'con' command is executed.
+17:34:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+con
+----------------End of Script----------------
+
+17:34:20 INFO  : Launch script is exported to file 'C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_ece544_proj2_olc.elf.tcl'
+18:09:00 INFO  : Disconnected from the channel tcfchan#1.
+18:09:32 INFO  : Launching XSDB server: xsdb.bat -interactive C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\temp_xsdb_launch_script.tcl
+18:09:37 INFO  : XSDB server has started successfully.
+18:09:37 INFO  : Processing command line option -hwspec C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga.hdf.
+18:10:25 INFO  : Refreshed build settings on project ece544_proj2_OLC
+18:10:25 INFO  : Refreshed build settings on project ece544_proj2_app
+18:14:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:14:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+18:14:16 INFO  : FPGA configured successfully with bitstream "C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/download.bit"
+18:24:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+18:24:59 INFO  : 'fpga -state' command is executed.
+18:24:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:24:59 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646055A' is selected.
+18:24:59 INFO  : 'jtag frequency' command is executed.
+18:24:59 INFO  : Context for processor 'microblaze_0' is selected.
+18:24:59 INFO  : Hardware design information is loaded from 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf'.
+18:24:59 INFO  : Context for processor 'microblaze_0' is selected.
+18:24:59 INFO  : Processor reset is completed for 'microblaze_0'.
+18:24:59 INFO  : Context for processor 'microblaze_0' is selected.
+18:25:00 INFO  : The application 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf' is downloaded to processor 'microblaze_0'.
+18:25:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+loadhw C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+dow C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf
+----------------End of Script----------------
+
+18:25:00 INFO  : Memory regions updated for context MicroBlaze #0
+18:25:00 INFO  : Context for processor 'microblaze_0' is selected.
+18:25:00 INFO  : 'con' command is executed.
+18:25:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+con
+----------------End of Script----------------
+
+18:25:00 INFO  : Launch script is exported to file 'C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_ece544_proj2_olc.elf.tcl'
+18:58:49 INFO  : Disconnected from the channel tcfchan#1.
+18:59:23 INFO  : Launching XSDB server: xsdb.bat -interactive C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\temp_xsdb_launch_script.tcl
+18:59:28 INFO  : XSDB server has started successfully.
+18:59:29 INFO  : Processing command line option -hwspec C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga.hdf.
+19:00:16 INFO  : Refreshed build settings on project ece544_proj2_OLC
+19:00:17 INFO  : Refreshed build settings on project ece544_proj2_app
+19:05:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:05:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+19:05:22 INFO  : FPGA configured successfully with bitstream "C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/download.bit"
+19:05:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+19:05:33 INFO  : 'fpga -state' command is executed.
+19:05:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:05:33 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646055A' is selected.
+19:05:33 INFO  : 'jtag frequency' command is executed.
+19:05:33 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:33 INFO  : Hardware design information is loaded from 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf'.
+19:05:33 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:34 INFO  : Processor reset is completed for 'microblaze_0'.
+19:05:34 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:34 INFO  : The application 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf' is downloaded to processor 'microblaze_0'.
+19:05:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+loadhw C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+dow C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf
+----------------End of Script----------------
+
+19:05:35 INFO  : Memory regions updated for context MicroBlaze #0
+19:05:35 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:35 INFO  : 'con' command is executed.
+19:05:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+con
+----------------End of Script----------------
+
+19:05:35 INFO  : Launch script is exported to file 'C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_ece544_proj2_olc.elf.tcl'
+20:17:59 INFO  : Disconnected from the channel tcfchan#1.
+20:18:36 INFO  : Launching XSDB server: xsdb.bat -interactive C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\temp_xsdb_launch_script.tcl
+20:18:41 INFO  : XSDB server has started successfully.
+20:18:42 INFO  : Processing command line option -hwspec C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga.hdf.
+20:19:23 INFO  : Refreshed build settings on project ece544_proj2_OLC
+20:19:23 INFO  : Refreshed build settings on project ece544_proj2_app
+20:24:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:24:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+20:24:18 INFO  : FPGA configured successfully with bitstream "C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/download.bit"
+20:24:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+20:24:32 INFO  : 'fpga -state' command is executed.
+20:24:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:24:32 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646055A' is selected.
+20:24:32 INFO  : 'jtag frequency' command is executed.
+20:24:32 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:32 INFO  : Hardware design information is loaded from 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf'.
+20:24:32 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:32 INFO  : Processor reset is completed for 'microblaze_0'.
+20:24:32 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:33 INFO  : The application 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf' is downloaded to processor 'microblaze_0'.
+20:24:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+loadhw C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+dow C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf
+----------------End of Script----------------
+
+20:24:33 INFO  : Memory regions updated for context MicroBlaze #0
+20:24:34 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:34 INFO  : 'con' command is executed.
+20:24:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+con
+----------------End of Script----------------
+
+20:24:34 INFO  : Launch script is exported to file 'C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_ece544_proj2_olc.elf.tcl'
+20:34:09 INFO  : Disconnected from the channel tcfchan#1.
+20:34:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A" && level==0} -index 0' command is executed.
+20:34:09 INFO  : 'fpga -state' command is executed.
+20:34:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:34:09 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646055A' is selected.
+20:34:10 INFO  : 'jtag frequency' command is executed.
+20:34:10 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:10 INFO  : Hardware design information is loaded from 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf'.
+20:34:10 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:10 INFO  : Processor reset is completed for 'microblaze_0'.
+20:34:10 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:11 INFO  : The application 'C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf' is downloaded to processor 'microblaze_0'.
+20:34:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+loadhw C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/n4fpga_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+dow C:/VivadoProjects/ece544_proj2/ece544_proj2.sdk/ece544_proj2_OLC/Debug/ece544_proj2_OLC.elf
+----------------End of Script----------------
+
+20:34:12 INFO  : Memory regions updated for context MicroBlaze #0
+20:34:12 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:12 INFO  : 'con' command is executed.
+20:34:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646055A"} -index 0
+con
+----------------End of Script----------------
+
+20:34:12 INFO  : Launch script is exported to file 'C:\VivadoProjects\ece544_proj2\ece544_proj2.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_ece544_proj2_olc.elf.tcl'
+20:38:48 INFO  : Disconnected from the channel tcfchan#2.

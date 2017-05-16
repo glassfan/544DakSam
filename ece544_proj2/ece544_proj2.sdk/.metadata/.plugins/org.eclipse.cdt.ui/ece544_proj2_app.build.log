@@ -1,4 +1,4 @@
-15:42:43 **** Auto Build of configuration Debug for project ece544_proj2_app ****
+20:22:04 **** Auto Build of configuration Debug for project ece544_proj2_app ****
 make all 
 'Building file: ../src/ece544_IP_Test.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -35,5 +35,5 @@ mb-size ece544_proj2_app.elf  |tee "ece544_proj2_app.elf.size"
 'Finished building: ece544_proj2_app.elf.size'
 ' '
 
-15:42:54 Build Finished (took 10s.384ms)
+20:22:14 Build Finished (took 10s.16ms)
 

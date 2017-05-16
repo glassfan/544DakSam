@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1494799218">
-  <File Type="PA-TCL" Name="n4fpga.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1494903862">
   <File Type="RDS-PROPCONSTRS" Name="n4fpga_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="n4fpga.tcl"/>
   <File Type="RDS-RDS" Name="n4fpga.vds"/>
   <File Type="RDS-UTIL" Name="n4fpga_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="n4fpga_utilization_synth.pb"/>
@@ -10,7 +10,7 @@
   <File Type="VDS-TIMING-PB" Name="n4fpga_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/MOTOR_CONTROLLER.v">
+    <File Path="$PSRCDIR/sources_1/new/MOTOR_SPEED_CONTROLLER.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -31,10 +31,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/MOTOR_DIRECTION_CONTROLLER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/hardware/n4fpga.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Users/sburkhar/Desktop/Personal/School/Classes/Spring-2017/Projects/Project1/Project_1_release/hardware/n4fpga.v"/>
         <Attr Name="ImportTime" Val="1482615308"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MOTOR_CONTROLLER.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

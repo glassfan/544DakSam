@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date             : Sun May 14 15:08:42 2017
+| Date             : Mon May 15 20:12:16 2017
 | Host             : sburkhar-MOBL2 running 64-bit major release  (build 9200)
 | Command          : report_power -file n4fpga_power_routed.rpt -pb n4fpga_power_summary_routed.pb -rpx n4fpga_power_routed.rpx
 | Design           : n4fpga
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.287 |
-| Dynamic (W)              | 0.181 |
+| Total On-Chip Power (W)  | 0.289 |
+| Dynamic (W)              | 0.182 |
 | Device Static (W)        | 0.106 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 83.7  |
@@ -49,22 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.018 |       14 |       --- |             --- |
-| Slice Logic              |     0.007 |     8634 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     3019 |     63400 |            4.76 |
+| Clocks                   |     0.019 |       14 |       --- |             --- |
+| Slice Logic              |     0.007 |     8686 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     3044 |     63400 |            4.80 |
 |   LUT as Distributed RAM |    <0.001 |      112 |     19000 |            0.59 |
-|   Register               |    <0.001 |     3754 |    126800 |            2.96 |
-|   CARRY4                 |    <0.001 |      143 |     15850 |            0.90 |
+|   Register               |    <0.001 |     3773 |    126800 |            2.98 |
+|   CARRY4                 |    <0.001 |      150 |     15850 |            0.95 |
 |   F7/F8 Muxes            |    <0.001 |      222 |     63400 |            0.35 |
 |   LUT as Shift Register  |    <0.001 |       81 |     19000 |            0.43 |
-|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Others                 |    <0.001 |      719 |       --- |             --- |
-| Signals                  |     0.012 |     5924 |       --- |             --- |
+|   Others                 |    <0.001 |      722 |       --- |             --- |
+| Signals                  |     0.012 |     5958 |       --- |             --- |
 | Block RAM                |     0.014 |       32 |       135 |           23.70 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | I/O                      |     0.024 |       86 |       210 |           40.95 |
 | Static Power             |     0.106 |          |           |                 |
-| Total                    |     0.287 |          |           |                 |
+| Total                    |     0.289 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,8 +73,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.066 |       0.050 |      0.016 |
-| Vccaux    |       1.800 |     0.078 |       0.059 |      0.018 |
+| Vccint    |       1.000 |     0.068 |       0.052 |      0.016 |
+| Vccaux    |       1.800 |     0.078 |       0.060 |      0.018 |
 | Vcco33    |       3.300 |     0.011 |       0.007 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.004 |       0.000 |      0.004 |
@@ -154,8 +153,8 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                          | Power (W) |
 +-----------------------------------------------------------------------------------------------+-----------+
-| n4fpga                                                                                        |     0.181 |
-|   EMBSYS                                                                                      |     0.157 |
+| n4fpga                                                                                        |     0.182 |
+|   EMBSYS                                                                                      |     0.158 |
 |     PmodENC_0                                                                                 |     0.002 |
 |       inst                                                                                    |     0.002 |
 |         PMODENC_DEBOUNCER                                                                     |    <0.001 |
@@ -194,7 +193,7 @@ Table of Contents
 |                   MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I               |    <0.001 |
 |                   MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I               |    <0.001 |
 |                   MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I               |    <0.001 |
-|             QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I                                          |     0.003 |
+|             QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I                                          |     0.004 |
 |               CONTROL_REG_I                                                                   |    <0.001 |
 |               FIFO_EXISTS.CLK_CROSS_I                                                         |    <0.001 |
 |                 LOGIC_GENERATION_CDC.DRR_OVERRUN_S2AX_1                                       |    <0.001 |
@@ -337,10 +336,10 @@ Table of Contents
 |       U0                                                                                      |    <0.001 |
 |         MDM_Core_I1                                                                           |    <0.001 |
 |           JTAG_CONTROL_I                                                                      |    <0.001 |
-|     microblaze_0                                                                              |     0.016 |
-|       U0                                                                                      |     0.016 |
-|         MicroBlaze_Core_I                                                                     |     0.016 |
-|           Performance.Core                                                                    |     0.016 |
+|     microblaze_0                                                                              |     0.017 |
+|       U0                                                                                      |     0.017 |
+|         MicroBlaze_Core_I                                                                     |     0.017 |
+|           Performance.Core                                                                    |     0.017 |
 |             Data_Flow_I                                                                       |     0.009 |
 |               ALU_I                                                                           |     0.002 |
 |                 ALL_Bits[0].ALU_Bit_I1                                                        |    <0.001 |
@@ -1200,7 +1199,7 @@ Table of Contents
 |           DB                                                                                  |    <0.001 |
 |           RGB1B                                                                               |    <0.001 |
 |           RGB2B                                                                               |    <0.001 |
-|           SSB                                                                                 |     0.001 |
+|           SSB                                                                                 |     0.002 |
 |             Digit0                                                                            |    <0.001 |
 |             Digit1                                                                            |    <0.001 |
 |             Digit2                                                                            |    <0.001 |
@@ -1215,14 +1214,15 @@ Table of Contents
 |           ACTIVE_LOW_EXT.ACT_LO_EXT                                                           |    <0.001 |
 |         SEQ                                                                                   |    <0.001 |
 |           SEQ_COUNTER                                                                         |    <0.001 |
-|   motor_controller                                                                            |    <0.001 |
+|   motor_direction_controller                                                                  |    <0.001 |
+|   motor_speed_controller                                                                      |    <0.001 |
 |   motor_speed_detector                                                                        |    <0.001 |
 |   pmodoledrgb_out_pin10_iobuf                                                                 |    <0.001 |
 |   pmodoledrgb_out_pin1_iobuf                                                                  |     0.000 |
 |   pmodoledrgb_out_pin2_iobuf                                                                  |    <0.001 |
 |   pmodoledrgb_out_pin3_iobuf                                                                  |     0.000 |
 |   pmodoledrgb_out_pin4_iobuf                                                                  |    <0.001 |
-|   pmodoledrgb_out_pin7_iobuf                                                                  |    <0.001 |
+|   pmodoledrgb_out_pin7_iobuf                                                                  |     0.001 |
 |   pmodoledrgb_out_pin8_iobuf                                                                  |    <0.001 |
 |   pmodoledrgb_out_pin9_iobuf                                                                  |    <0.001 |
 +-----------------------------------------------------------------------------------------------+-----------+

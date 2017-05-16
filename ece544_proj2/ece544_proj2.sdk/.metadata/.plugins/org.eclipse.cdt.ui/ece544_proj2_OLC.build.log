@@ -1,6 +1,6 @@
-18:00:39 **** Incremental Build of configuration Debug for project ece544_proj2_OLC ****
+20:34:06 **** Incremental Build of configuration Debug for project ece544_proj2_OLC ****
 make all 
 make: Nothing to be done for `all'.
 
-18:00:40 Build Finished (took 1s.119ms)
+20:34:07 Build Finished (took 942ms)
 

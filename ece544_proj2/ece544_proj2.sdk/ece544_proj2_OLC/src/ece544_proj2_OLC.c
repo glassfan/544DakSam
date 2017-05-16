@@ -392,7 +392,7 @@ void RotaryOutput(void)
 		}
 
 		// Desired motor_speed is RotaryCnt, for open loop control drive motor with this value
-		XGpio_DiscreteWrite(&GPIOInst0, GPIO_0_OUTPUT_0_CHANNEL, RotaryCnt);
+		XGpio_DiscreteWrite(&GPIOInst0, GPIO_0_OUTPUT_0_CHANNEL, ((pEnc_switch & 0x1) << 8) | (RotaryCnt & 0xFF));
 
 		RPM = XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL);
 

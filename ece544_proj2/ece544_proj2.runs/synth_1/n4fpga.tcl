@@ -65,8 +65,9 @@ set_property used_in_implementation false [get_files -all C:/VivadoProjects/ece5
 set_property is_locked true [get_files C:/VivadoProjects/ece544_proj2/ece544_proj2.srcs/sources_1/bd/embsys/embsys.bd]
 
 read_verilog -library xil_defaultlib {
-  C:/VivadoProjects/ece544_proj2/ece544_proj2.srcs/sources_1/new/MOTOR_CONTROLLER.v
+  C:/VivadoProjects/ece544_proj2/ece544_proj2.srcs/sources_1/new/MOTOR_SPEED_CONTROLLER.v
   C:/VivadoProjects/ece544_proj2/ece544_proj2.srcs/sources_1/new/MOTOR_SPEED_DETECTOR.v
+  C:/VivadoProjects/ece544_proj2/ece544_proj2.srcs/sources_1/new/MOTOR_DIRECTION_CONTROLLER.v
   C:/VivadoProjects/ece544_proj2/ece544_proj2.srcs/sources_1/imports/hardware/n4fpga.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {

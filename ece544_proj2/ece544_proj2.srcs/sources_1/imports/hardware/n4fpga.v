@@ -138,13 +138,11 @@ assign rotary_press = JD[6];
 assign rotary_sw = JD[7];
 
 // instantiate the motor controller
-MOTOR_CONTROLLER motor_controller(
+MOTOR_SPEED_CONTROLLER motor_speed_controller(
     .clk(clk_10MHz),
     .reset_n(sysreset_n),
-    .motor_direction_in(gpio_out[8]),
     .motor_speed_in(gpio_out[7:0]),
-    .motor_direction_out(JB[0]),
-    .motor_speed_out(JB[1])
+    .motor_enable_out(JB[1])
     );
     
 MOTOR_SPEED_DETECTOR motor_speed_detector(
@@ -155,6 +153,14 @@ MOTOR_SPEED_DETECTOR motor_speed_detector(
     .motor_speed_count(gpio_in[9:0])
     );
     
+MOTOR_DIRECTION_CONTROLLER motor_direction_controller(
+    .clk(clk_10MHz),
+    .reset_n(sysreset_n),
+    .motor_speed_in(gpio_in[9:0]),
+    .motor_direction_in(gpio_out[8]),
+    .motor_direction_out(JB[0])
+    );
+        
 // instantiate the embedded system
 embsys EMBSYS
        (// PMOD OLED pins 

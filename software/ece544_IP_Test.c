@@ -458,32 +458,18 @@ void MotorControl(void)
 		pmodHB3_set_motor_direction(&pmodHB3_inst, (pEnc_switch & 0x1));
 
 		/********************************************************************
-		 * 				Step 5: Perform calculation of motor control signal
-		 * 					The motor control signal is a function of the
-		 * 					desired motor speed, the proportional constant (kP),
-		 * 					and the actual motor speed.
+		 * 				Step 5: Print the current motor control values
+		 * 				This is done here because the input/control/output is
+		 * 				actually performed in the FIT interrupt controller, so that
+		 * 				it occurs much faster than the main loop.  But we don't
+		 * 				want to print in the interrupt handler, so we do the print
+		 * 				here.
 		 ********************************************************************/
 
-
-		// actualMotorSpeed = XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL);
-		// actualRpm = actualMotorSpeed * 60;
-		// actualRpm = pmodHB3_read_motor_speed(&pmodHB3_inst);
-//		desiredRpm = desiredMotorSpeed * MAX_RPM/MAX_MOTOR_SPEED;
-//		signedError = desiredRpm - actualRpm;
-//		p_term = (float)(pcntrl_const)/10 * signedError;
-//		motorOutRpm = p_term + desiredRpm;
-//		if(motorOutRpm > MAX_RPM){
-//				motorOutRpm = MAX_RPM;
-//		}
-//		else if (motorOutRpm < 0){
-//			motorOutRpm = 0;
-//		}
-//
-//		motorOut = (u8)(motorOutRpm* MAX_MOTOR_SPEED /MAX_RPM );
-//
-		xil_printf("Desired RPM: %d \n\n\r", desiredRpm);
-		xil_printf("actual Rpm: %d \n\r", actualRpm);
-		xil_printf("Motor Out: %d \n\r", motorOut);
+		xil_printf("ActualRpm:%d,DesiredRpm:%d,KP:%d,Error:%d,MotorOutRpm:%d \n\r", actualRpm, desiredRpm,pcntrl_const,signedError,motorOutRpm);
+		// xil_printf("Desired RPM: %d \n\n\r", desiredRpm);
+		// xil_printf("actual Rpm: %d \n\r", actualRpm);
+		// xil_printf("Motor Out: %d \n\r", motorOut);
 
 		// Calculate RPM based on actual motor speed and pring to SSEG Display
 		RPM = actualRpm;
@@ -500,12 +486,6 @@ void MotorControl(void)
 		NX4IO_SSEG_setDigit(SSEGLO, DIGIT0, sseg_rpm[9]);	// display ones digit
 
 		/********************************************************************
-		 * 				Step 6: Send the motor control signals to the motor
-		 * 					Use the motor control handles to control the motor.
-		 ********************************************************************/
-		// pmodHB3_set_motor_speed(&pmodHB3_inst, motorOut);
-
-		/********************************************************************
 		 * 				Step 7: Update the previous values before waiting for the next iteration
 		 ********************************************************************/
 		prev_pEnc_switch = pEnc_switch;
@@ -515,7 +495,7 @@ void MotorControl(void)
 		prev_actualMotorSpeed = actualMotorSpeed;
 		prevRotary = RotaryCnt;
 
-		usleep(100000);
+		usleep(10000);
 	}
 
 	xil_printf("\n\rMotor Controller App Completed!!!\n\r");
@@ -558,6 +538,7 @@ int do_init()
 		exit(1);
 	}
 
+	// Call reduced PWM signal range to PmodHB3 driver
 	pmodHB3_init(&pmodHB3_inst, 500, 50);
 
 	// initialize the GPIO instances
